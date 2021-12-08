@@ -1,6 +1,6 @@
 import React from "react";
-import data from "./data";
 import Home from "./components/Home";
+import data from "./data";
 
 function App() {
     console.log(data.restaurants)

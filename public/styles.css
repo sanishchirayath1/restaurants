@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(247, 77, 120);
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(255, 136, 166);
+}
+span.decor-text {
+  font-size: smaller;
+  color: antiquewhite;
+  font-weight: 400;
+}
+.navbar {
+  background-color: #000;
+  color: rgb(223, 219, 219);
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.navbar > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.container {
+  color: white;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search {
+  height: 3rem;
+  font-size: 1.5rem;
+  min-width: 400px;
+  border: none;
+  border-radius: 1.5rem;
+  text-indent: 1.5rem;
+}
+.search:focus {
+  outline: none;
+}
+
+.card {
+  background: rgb(80, 80, 80);
+  border: 5px solid #000;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+.card-info {
+  padding-left: 1rem;
+  width: 100%;
+}
+.card-info > h1 {
+  padding-bottom: 1rem;
+  
+}
+.card-info-details {
+    display: flex;
+}
+.card-info-details > p {
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
+
+.card-info-location {
+    display: flex;
+   align-items: center;
+}
+.card-info-location > p {
+    margin: 0;
+    padding: 0;
+    padding-left: 0.25rem;
+}
+
+.restaurant-page {
+  margin: 1rem;
+}
+
+.restaurant-page-address {
+  margin-left: 1rem;
+}
+.restaurant-review {
+margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgb(80, 80, 80);
+  border: 5px solid #000;
+  border-radius: 1.5rem;
+}
+.restaurant-review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.restaurant-review-header > h3 {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+}
+.restaurant-review-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
+}
+
