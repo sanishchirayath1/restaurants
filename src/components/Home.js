@@ -18,7 +18,7 @@ function Home() {
   return (
     <div>
       <nav className="navbar"> <h1>Foodie Spot </h1></nav>
-      <div className="container">
+      <div className="container wrapper">
         <input type="text" className="search" />
         <Restaurants />
 

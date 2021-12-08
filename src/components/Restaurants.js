@@ -8,7 +8,7 @@ function Restaurants() {
     const dt = data.restaurants[0];
     const reviews = dt.reviews.map(review => <Review key={review.id} review={review} />);
     return (
-        <div className="restaurant-page" >
+        <div className="restaurant-page wrapper" >
             <h1>{dt.name} - <span className="decor-text">{dt.cuisine_type}</span></h1>
             <a href={`https://maps.google.com/?q=${dt.latlng.lat},${dt.latlng.lng}`}><img src="./assets/pin.png" width="10px" alt="" /> <span>{dt.neighborhood}</span></a>
             <span className="restaurant-page-address"> {dt.address} </span>
