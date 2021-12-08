@@ -4,9 +4,9 @@ import Review from "./Review";
 
 
 
-function Restaurants() {
-    const dt = data.restaurants[0];
-    const reviews = dt.reviews.map(review => <Review key={review.id} review={review} />);
+function Restaurants(props) {
+    const dt = data.restaurants.filter(restaurant => restaurant.id === props.id)[0];
+    const reviews = dt.reviews.map(review => <Review key={review} review={review} />);
     return (
         <div className="restaurant-page wrapper" >
             <h1>{dt.name} - <span className="decor-text">{dt.cuisine_type}</span></h1>
@@ -34,24 +34,3 @@ function Restaurants() {
 
 export default Restaurants;
 
-
-// "restaurants": [{
-//     "id": 1,
-//     "name": "Mission Chinese Food",
-//     "neighborhood": "Manhattan",
-//     "photograph": "1.jpg",
-//     "address": "171 E Broadway, New York, NY 10002",
-//     "latlng": {
-//       "lat": 40.713829,
-//       "lng": -73.989667
-//     },
-//     "cuisine_type": "Asian",
-//     "operating_hours": {
-//       "Monday": "5:30 pm - 11:00 pm",
-//       "Tuesday": "5:30 pm - 12:00 am",
-//       "Wednesday": "5:30 pm - 12:00 am",
-//       "Thursday": "5:30 pm - 12:00 am",
-//       "Friday": "5:30 pm - 12:00 am",
-//       "Saturday": "12:00 pm - 4:00 pm, 5:30 pm - 12:00 am",
-//       "Sunday": "12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm"
-//     },

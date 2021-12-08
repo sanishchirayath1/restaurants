@@ -1,31 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
 import data from "../data";
 import Card from "./Card";
 import Restaurants from "./Restaurants";
 
-const restaurantsInfo = data.restaurants.map(restaurant => {
-  return (
-    <Card
-      key={restaurant.id}
-      name={restaurant.name}
-      neighborhood={restaurant.neighborhood}
-      cuisine={restaurant.cuisine_type}
-    />
-  )
-})
+
 
 function Home() {
+  const [restaurant, setRestaurant] = useState(1)
+  const [showRestaurant, setShowRestaurant] = useState(false)
+
+  function handleClick(id) {
+  setRestaurant(id)
+  setShowRestaurant(true)
+  }
+  const restaurantsInfo = data.restaurants.map(restaurant => {
+    return (
+      <Card
+        key={restaurant.id}
+        name={restaurant.name}
+        neighborhood={restaurant.neighborhood}
+        cuisine={restaurant.cuisine_type}
+        handleClick={() => handleClick(restaurant.id)}
+      />
+    )
+  })
+
   return (
     <div>
-      <nav className="navbar"> <h1>Foodie Spot </h1></nav>
+      <nav className="navbar"> <span onClick={() => setShowRestaurant(false)} className="title" >Foodie Spot </span>
+      <ul> <li onClick={() => setShowRestaurant(false)}>Home</li> </ul>
+      </nav>
       <div className="container wrapper">
         <input type="text" className="search" />
-        <Restaurants />
-
-        <div className="restaurants">
+  
+          {
+          showRestaurant ?  
+          <Restaurants id={restaurant}/>: 
+          <div className="restaurants">
+            {restaurantsInfo} 
+            </div>
+          }   
         
-          {restaurantsInfo}   
-        </div>
       </div>
     </div>
   );
