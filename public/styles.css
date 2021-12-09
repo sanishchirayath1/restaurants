@@ -76,6 +76,7 @@ nav ul {
 
 .card {
   background: rgb(80, 80, 80);
+  color: aliceblue;
   border-radius: 1.5rem;
   padding: 1rem;
   margin: 1rem;
@@ -83,7 +84,7 @@ nav ul {
 }
 .card-info {
   padding-left: 1rem;
-  width: 100%;
+  width: 300px;
 }
 .card-info > h1 {
   padding-bottom: 1rem;
@@ -97,22 +98,32 @@ nav ul {
   margin-left: auto;
 }
 
-.card-info-location {
-  display: flex;
-  align-items: center;
+.card-info-location,
+.neighborhood {
+  color: rgb(247, 77, 120);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
-.card-info-location > p {
+
+.card-info-location:hover {
+  color: rgb(255, 136, 166);
+}
+.card-info-location > span {
   margin: 0;
   padding: 0;
   padding-left: 0.25rem;
+  font-size: 0.8rem;
 }
 
 .restaurant-page {
   margin: 1rem;
+  margin-top: 100px;
+  color: aliceblue;
 }
 
 .restaurant-page-address {
   margin-left: 1rem;
+  font-size: 0.8rem;
 }
 .restaurant-review {
   margin-bottom: 1rem;
@@ -133,6 +144,8 @@ nav ul {
 .restaurant-review-header > img {
   border: 2px solid #000;
   border-radius: 50%;
+  width: 25px;
+  height: 25px;
 }
 .restaurant-review-stats {
   display: flex;
