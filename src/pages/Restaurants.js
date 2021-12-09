@@ -14,7 +14,7 @@ function Restaurants() {
             <h1>{dt.name} - <span className="decor-text">{dt.cuisine_type}</span></h1>
             <a href={`https://maps.google.com/?q=${dt.latlng.lat},${dt.latlng.lng}`}><img src="../assets/pin.png"  alt="" /> <span className="neighborhood">{dt.neighborhood}</span></a>
             <span className="restaurant-page-address"> {dt.address} </span>
-            <p> 
+            <p className="restaurant-page-timings"> 
                 Monday : {dt.operating_hours.Monday}
                 <br />
                 Tuesday : {dt.operating_hours.Tuesday}

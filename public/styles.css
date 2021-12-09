@@ -14,12 +14,8 @@ body {
 }
 a {
   text-decoration: none;
-  color: rgb(247, 77, 120);
 }
-a:hover {
-  text-decoration: none;
-  color: rgb(255, 136, 166);
-}
+
 span.decor-text {
   font-size: smaller;
   color: antiquewhite;
@@ -29,11 +25,16 @@ span.decor-text {
 nav ul {
   list-style: none;
 }
+nav ul a {
+  color: aliceblue;
+}
 .title {
   font-size: 36px;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
 }
+
 .navbar {
   background-color: #000;
   color: rgb(223, 219, 219);
@@ -51,7 +52,7 @@ nav ul {
 
 .container {
   color: white;
-  margin-top: 100px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -61,12 +62,18 @@ nav ul {
 .wrapper {
   max-width: 1200px;
 }
+.searchbar {
+  margin-top: 120px;
+  z-index: 4;
+  text-align: center;
+  display: flex;
+  place-content: center;
+}
+
 .search {
-  background: red;
-  max-width: 500px;
+  width: 100%;
   height: 3rem;
   font-size: 1.5rem;
-  min-width: 400px;
   border: none;
   border-radius: 1.5rem;
   text-indent: 1.5rem;
@@ -117,7 +124,7 @@ nav ul {
 
 .restaurant-page {
   margin: 1rem;
-  margin-top: 100px;
+  margin-top: 120px;
   color: aliceblue;
 }
 .restaurant-page > h1 {
@@ -127,6 +134,9 @@ nav ul {
 .restaurant-page-address {
   margin-left: 1rem;
   font-size: 0.8rem;
+}
+.restaurant-page-timings {
+  margin-bottom: 5rem;
 }
 .restaurant-review {
   margin-bottom: 1rem;
