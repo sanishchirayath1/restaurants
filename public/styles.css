@@ -54,7 +54,6 @@ nav ul a {
   color: white;
   margin-top: 2rem;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -63,8 +62,9 @@ nav ul a {
   max-width: 1200px;
 }
 .searchbar {
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-top: 120px;
-  z-index: 4;
   text-align: center;
   display: flex;
   place-content: center;
@@ -89,6 +89,7 @@ nav ul a {
   padding: 1rem;
   margin: 1rem;
   display: flex;
+  height: 150px;
 }
 .card-info {
   padding-left: 1rem;
