@@ -62,6 +62,7 @@ nav ul {
   max-width: 1200px;
 }
 .search {
+  background: red;
   max-width: 500px;
   height: 3rem;
   font-size: 1.5rem;
@@ -104,8 +105,7 @@ nav ul {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
-
-.card-info-location:hover {
+.neighborhood:hover {
   color: rgb(255, 136, 166);
 }
 .card-info-location > span {
@@ -119,6 +119,9 @@ nav ul {
   margin: 1rem;
   margin-top: 100px;
   color: aliceblue;
+}
+.restaurant-page > h1 {
+  font-size: 2.5rem;
 }
 
 .restaurant-page-address {

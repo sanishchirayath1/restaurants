@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data";
 import Card from "../components/Card";
+import Search from "../components/Search";
 
 function Home() {
   const restaurantsInfo = data.restaurants.map(restaurant => {
@@ -15,10 +16,12 @@ function Home() {
     )
   })
   return (
+    <>
+      <Search />
       <div className="container wrapper">
-        <input type="text" className="search" />
         {restaurantsInfo}    
       </div>
+    </>
   );
 }
 
