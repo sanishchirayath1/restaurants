@@ -69,6 +69,10 @@ nav ul a {
   display: flex;
   place-content: center;
 }
+.search-location-details {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
 .search {
   width: 100%;
