@@ -45,7 +45,7 @@ function Search() {
                 <div style={{color:"#fff"}} className="search-location-details">
                     <p>Your Latitude: {coords.lat}</p>
                     <p>Your Longitude: {coords.lng}</p>
-                    <p>You are {haversineKm} KM away from Thrissur</p>
+                    <p>You are {haversineKm.toFixed(2)} KM away from Thrissur</p>
                 </div>
             )}
         </>
