@@ -7,8 +7,7 @@ import {useParams} from "react-router-dom";
 function Restaurants() {
     const {id} = useParams();
     const dt = data.restaurants.filter(restaurant => restaurant.id.toString() === id)[0];
-    console.log(dt)
-    const reviews = dt.reviews.map(review => <Review key={review} review={review} />);
+    const reviews = dt.reviews.map(review => <Review key={review.comments} review={review} />);
     return (
         <div className="restaurant-page wrapper" >
             <h1>{dt.name} - <span className="decor-text">{dt.cuisine_type}</span></h1>
