@@ -113,7 +113,6 @@ span#title {
   width: 100%;
 }
 .search-location-details {
-  /* background: rgb(66, 66, 66, 0.8); */
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(5px);
   -moz-backdrop-filter: blur(5px);
@@ -124,18 +123,8 @@ span#title {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 0.1rem;
-  border-radius:  0 0 1.5rem 1.5rem;
+  border-bottom: 1px #000 solid;
   position: relative;
-}
-.search-location-details::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left:0;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
 }
 
 .search-overlay {
@@ -171,8 +160,8 @@ span#title {
   content: '';
   position: absolute;
   bottom: 0;
-  left:0;
-  width: 100%;
+  left: 5% ;  
+  width: 90%;
   height: 1px;
   background-color: #000;
 }
