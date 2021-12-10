@@ -3,7 +3,7 @@ import data from "../data";
 import {Link} from "react-router-dom";
 
 
-
+//i understand search is not accessible and the arrow keys doesn't work...I challenged myself to build the searchbar from scratch without lokking up google...That's why it is how it is..I think <select><option></option></select> will do the work...I am little lazy to work on it..May be later..
 function Search() {
     const [place, setPlace] = useState("")
     const [coords, setCoords] = useState({
