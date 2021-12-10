@@ -75,7 +75,7 @@ function Search() {
                         <span> You are {haversineKm.toFixed(2)} KM away from Thrissur</span>
                     </div>
                 )}
-                {overlayItems}
+                {overlayItems && overlayItems}
             </div>
         </div>
         </>
