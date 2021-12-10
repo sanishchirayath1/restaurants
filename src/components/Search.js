@@ -52,12 +52,16 @@ function Search() {
 
         setOverlayItems(searchOverlayItems)
 
+        function errorCallback(e) {
+            console.log("error")
+            console.log(e)
+        }
         navigator.geolocation.getCurrentPosition(pos => {
             setCoords({
                 lat:pos.coords.latitude,
                 lng:pos.coords.longitude
             })   
-        })
+        }, errorCallback,{timeout:10000})
 
         console.log(coords)
        }
