@@ -3,6 +3,18 @@ import React from "react";
 
 function Review(props) {
     const { review } = props;
+    
+    function stars() {
+        let ratingStars = ""
+        let rating = review.rating
+        while(rating > 0) {
+            ratingStars += "⭐"
+        }
+        while((5 - rating) > 0) {
+            ratingStars += "☆"
+        }
+        return ratingStars
+    }
 
     return (
         <div className="restaurant-review">
@@ -13,7 +25,7 @@ function Review(props) {
 
 
             <div className="restaurant-review-stats">
-                <span className="restaurant-review-rating">{review.rating * "⭐"}</span>
+                <span className="restaurant-review-rating">{review.rating} {stars()}</span>
                 <span className="restaurant-review-date">
                 Reviewed on {review.date}</span>
             </div>
