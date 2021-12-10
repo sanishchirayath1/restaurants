@@ -312,7 +312,7 @@ span#title {
 
 @media screen and (max-width: 990px) {
   .restaurant-page-image {
-    width: 100%;
+    width: 90%;
   }
   
 }
