@@ -6,7 +6,7 @@ function Review(props) {
     
     function stars() {
         let ratingStars = ""
-        let rating = review.rating
+        let rating = Math.floor(review.rating)
         while(rating > 0) {
             ratingStars += "⭐"
             rating--
