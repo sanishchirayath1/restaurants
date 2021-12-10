@@ -28,7 +28,7 @@ function Review(props) {
     return (
         <div className="restaurant-review">
             <div className="restaurant-review-header">
-                <img src="../assets/profile.png" alt=""/>
+                <img src="../assets/profile.jpg" alt=""/>
                 <h3> {review.name}</h3>
                 </div>
 
