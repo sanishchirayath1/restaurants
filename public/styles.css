@@ -72,6 +72,7 @@ nav ul a {
   display: flex;
   place-content: center;
   position: relative;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .search-location-details {
@@ -84,8 +85,11 @@ nav ul a {
   height: 3rem;
   font-size: 1.5rem;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem ;
   text-indent: 1.5rem;
+}
+.search-active {
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .search-overlay {
@@ -95,13 +99,25 @@ nav ul a {
   padding-right: 2rem;
   width: 100%;
   height: 100%;
-  background-color: rgba(256, 256, 256, 0.5);
   display: none;
   color: black;
+  border-radius:  0 0 1.5rem 1.5rem;
 }
+
 .search-overlay-items {
-  background-color: white;
+  background-color: #fff;
   padding: 1rem;
+  margin-top: 0;
+  position: relative;
+}
+.search-overlay-items::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
 }
 .search-overlay-items:hover,
 .search-overlay-items:focus {

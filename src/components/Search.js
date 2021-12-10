@@ -19,11 +19,17 @@ function Search() {
 
     function handleChange(e) {
         const searchOverlay = document.getElementById("search-overlay");
+        const search = document.getElementById("search")
         
-        e.target.value ? searchOverlay.classList.add("active") : searchOverlay.classList.remove("active");
-    
-
         setPlace(e.target.value)
+
+        if(e.target.value === "") {
+            searchOverlay.classList.remove("active")
+            search.classList.remove("search-active")     
+        }else {
+            searchOverlay.classList.add("active")
+            search.classList.add("search-active")
+        }
 
         let searchResults = data.restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(e.target.value.toLowerCase()))
         
@@ -32,8 +38,9 @@ function Search() {
         <Link to={`/restaurants/${result.id}`}>
             <div className="search-overlay-items">
                 <p>{result.name}</p>
-            </div>
+            </div>    
         </Link>
+
         </>))
 
         setOverlayItems(searchOverlayItems)
@@ -58,7 +65,7 @@ function Search() {
     return (
         <>
         <div className="searchbar">
-            <input type="text" className="search" onChange={handleChange} value={place}/>
+            <input type="text" id="search" className="search" onChange={handleChange} value={place}/>
             <div id="search-overlay" className="search-overlay">{overlayItems}</div>
         </div>
         
