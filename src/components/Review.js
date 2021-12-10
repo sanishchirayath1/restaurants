@@ -9,9 +9,7 @@ function Review(props) {
         let rating = review.rating
         while(rating > 0) {
             ratingStars += "⭐"
-        }
-        while((5 - rating) > 0) {
-            ratingStars += "☆"
+            rating--
         }
         return ratingStars
     }
