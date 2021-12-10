@@ -18,6 +18,7 @@ function Search() {
     }
 
     function handleChange(e) {
+
         const searchOverlay = document.getElementById("search-overlay");
         const search = document.getElementById("search")
         
@@ -65,7 +66,7 @@ function Search() {
     return (
         <>
         <div className="searchbar">
-            <input type="text" id="search" className="search" onChange={handleChange} value={place}/>
+            <input type="text" id="search" className="search" onChange={handleChange} value={place} autoComplete="off"/>
             <div id="search-overlay" className="search-overlay">{overlayItems}</div>
         </div>
         
