@@ -69,7 +69,7 @@ function Search() {
             <input type="text" id="search" className="search" onChange={handleChange} value={place} autoComplete="off"/>
             <div id="search-overlay" className="search-overlay">
                 {place && (
-                    <div style={{color:"#000", background:"#f1f1f1"}} className="search-location-details">
+                    <div className="search-location-details">
                         <span> Your Latitude: {coords.lat} </span>
                         <span> Your Longitude: {coords.lng} </span>
                         <span> You are {haversineKm.toFixed(2)} KM away from Thrissur</span>
