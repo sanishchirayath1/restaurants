@@ -231,7 +231,7 @@ span#title {
 .restaurant-page-info-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1rem;
   justify-content: space-around;
   align-items: center;
 }
