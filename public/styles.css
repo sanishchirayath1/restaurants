@@ -200,5 +200,6 @@ nav ul a {
   opacity: 0.2;
 }
 .restaurant-review-date {
+  padding-left: 1rem;
   color: sandybrown;
 }
