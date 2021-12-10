@@ -1,28 +1,29 @@
 // import redux, {createStore} from "redux"
 
-// function increment() {
+// function darkmode() {
 //     return {
-//         type: "INCREMENT"
+//         type: "DARKMODE"
 //     }
 // }
 
-// function decrement() {
+// function lightmode() {
 //     return {
-//         type: "DECREMENT"
+//         type: "LIGHTMODE"
 //     }
 // }
 
-// function reducer(count = 0, action) {
+// function reducer(darkMode = true, action) {
 //     switch(action.type) {
-//         case "INCREMENT":
-//             return count + 1
-//         case "DECREMENT":
-//             return count - 1
+//         case "DARKMODE":
+//             return darkMode = true
+//         case "LIGHTMODE":
+//             return darkMode = false
 //         default:
-//             return count
+//             return darkMode
 //     }
 // }
 
 // const store = createStore(reducer)
 // store.subscribe(() => console.log(store.getState()))
+
 // export default store

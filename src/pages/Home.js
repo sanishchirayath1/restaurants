@@ -3,6 +3,8 @@ import data from "../data";
 import Card from "../components/Card";
 import Search from "../components/Search";
 
+
+
 function Home() {
   const restaurantsInfo = data.restaurants.map(restaurant => {
     return (

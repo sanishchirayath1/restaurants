@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home";
 import Restaurants from "./pages/Restaurants";
-
+// import{connect} from "react-redux"
 
 function App() {
     return (

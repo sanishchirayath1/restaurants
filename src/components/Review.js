@@ -5,13 +5,24 @@ function Review(props) {
     const { review } = props;
     
     function stars() {
-        let ratingStars = ""
-        let rating = Math.floor(review.rating)
+        let ratingStarsActive = ""
+        let ratingStarsInctive = ""
+
+        let rating = review.rating
+        let ratingRemainder = 5 - review.rating
+
         while(rating > 0) {
-            ratingStars += "⭐"
+            ratingStarsActive += "⭐"
             rating--
         }
-        return ratingStars
+        while(ratingRemainder > 0) {
+            ratingStarsInctive += "⭐"
+            ratingRemainder--
+        }
+        return (<>
+            <span className="review-stars-active">{ratingStarsActive}</span> 
+            <span className="review-stars-inactive">{ratingStarsInctive}</span>
+        </>)
     }
 
     return (
@@ -23,7 +34,7 @@ function Review(props) {
 
 
             <div className="restaurant-review-stats">
-                <span className="restaurant-review-rating">{stars()} </span>
+                <div className="restaurant-review-rating">{stars()} </div>
                 <span className="restaurant-review-date">
                 Reviewed on {review.date}</span>
             </div>
