@@ -20,8 +20,8 @@ function Review(props) {
             ratingRemainder--
         }
         return (<>
-            <span className="review-stars-active">{ratingStarsActive}</span> 
-            <span className="review-stars-inactive">{ratingStarsInctive}</span>
+            <span className="restaurant-review-stars-active">{ratingStarsActive}</span> 
+            <span className="restaurant-review-stars-inactive">{ratingStarsInctive}</span>
         </>)
     }
 

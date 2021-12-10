@@ -18,7 +18,7 @@ a {
 
 span.decor-text {
   font-size: smaller;
-  color: antiquewhite;
+  color: sandybrown;
   font-weight: 400;
 }
 
@@ -195,8 +195,10 @@ nav ul a {
 .restaurant-review-stats {
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem 0 1rem;
 }
-.review-stars-inactive {
+.restaurant-review-stars-inactive {
   opacity: 0.2;
+}
+.restaurant-review-date {
+  color: sandybrown;
 }
