@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import data from "../data";
+import {Link} from "react-router-dom";
 
 
 
@@ -8,6 +10,7 @@ function Search() {
         lat:"",
         lng:""
     })
+    const [overlayItems, setOverlayItems] = useState([])
 
     let placeCoords = {
         lat:10.5818,
@@ -15,38 +18,50 @@ function Search() {
     }
 
     function handleChange(e) {
+        const searchOverlay = document.getElementById("search-overlay");
+        
+        e.target.value ? searchOverlay.classList.add("active") : searchOverlay.classList.remove("active");
+    
 
         setPlace(e.target.value)
+
+        let searchResults = data.restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(e.target.value.toLowerCase()))
+        
+        console.log(searchResults)
+        let searchOverlayItems = searchResults.map(result => (<>
+        <Link to={`/restaurants/${result.id}`}>
+            <div className="search-overlay-items">
+                <p>{result.name}</p>
+            </div>
+        </Link>
+        </>))
+
+        setOverlayItems(searchOverlayItems)
+
+        
 
         navigator.geolocation.getCurrentPosition(pos => {
             setCoords({
                 lat:pos.coords.latitude,
                 lng:pos.coords.longitude
             })   
-            console.log(coords)
         })
 
+
        }
-
- 
-    console.log(placeCoords)
-    console.log(coords)
-
 
     let haversine = require("haversine-distance");
     let haversineM = haversine(coords, placeCoords); //Results in meters (default)
     let haversineKm = haversineM /1000; //Results in kilometers
-
-    console.log("distance (in meters): " + haversineM + "m");
-    console.log("distance (in kilometers): " + haversineKm+ "km");
 
     
     return (
         <>
         <div className="searchbar">
             <input type="text" className="search" onChange={handleChange} value={place}/>
-            <br/>
+            <div id="search-overlay" className="search-overlay">{overlayItems}</div>
         </div>
+        
         {place && (
                 <div style={{color:"#fff"}} className="search-location-details">
                     <p>Your Latitude: {coords.lat}</p>

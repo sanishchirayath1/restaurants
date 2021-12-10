@@ -61,6 +61,9 @@ nav ul a {
 .wrapper {
   max-width: 1200px;
 }
+
+/* search */
+
 .searchbar {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -68,7 +71,9 @@ nav ul a {
   text-align: center;
   display: flex;
   place-content: center;
+  position: relative;
 }
+
 .search-location-details {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -81,6 +86,29 @@ nav ul a {
   border: none;
   border-radius: 1.5rem;
   text-indent: 1.5rem;
+}
+
+.search-overlay {
+  position: absolute;
+  margin-top: 50px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(256, 256, 256, 0.5);
+  display: none;
+  color: black;
+}
+.search-overlay-items {
+  background-color: white;
+  padding: 1rem;
+}
+.search-overlay-items:hover,
+.search-overlay-items:focus {
+  background-color: #f1f1f1;
+}
+.active {
+  display: block;
 }
 .search:focus {
   outline: none;
@@ -155,7 +183,7 @@ nav ul a {
 
 /* restaurant page */
 .restaurant-page {
-  margin: 1rem;
+  margin: 2rem;
   margin-top: 120px;
   color: aliceblue;
 }
@@ -169,6 +197,12 @@ nav ul a {
 }
 .restaurant-page-timings {
   margin-bottom: 5rem;
+}
+.restaurant-page-timings-day {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  color: seashell;
 }
 .restaurant-review {
   margin-bottom: 1rem;

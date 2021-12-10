@@ -14,19 +14,19 @@ function Restaurants() {
             <a href={`https://maps.google.com/?q=${dt.latlng.lat},${dt.latlng.lng}`}><img src="../assets/pin.png"  alt="" /> <span className="neighborhood">{dt.neighborhood}</span></a>
             <span className="restaurant-page-address"> {dt.address} </span>
             <p className="restaurant-page-timings"> 
-                Monday : {dt.operating_hours.Monday}
+                <span className="restaurant-page-timings-day">Monday</span> : {dt.operating_hours.Monday}
                 <br />
-                Tuesday : {dt.operating_hours.Tuesday}
+                <span className="restaurant-page-timings-day">Tuesday</span> : {dt.operating_hours.Tuesday}
                 <br />
-                Wednesday : {dt.operating_hours.Wednesday}
+                <span className="restaurant-page-timings-day">Wednesday</span> : {dt.operating_hours.Wednesday}
                 <br />
-                Thursday : {dt.operating_hours.Thursday}
+                <span className="restaurant-page-timings-day">Thursday</span> : {dt.operating_hours.Thursday}
                 <br />
-                Friday : {dt.operating_hours.Friday}   
+                <span className="restaurant-page-timings-day">Friday</span> : {dt.operating_hours.Friday}   
                 <br />
-                Saturday : {dt.operating_hours.Saturday}
+                <span className="restaurant-page-timings-day">Saturday</span> : {dt.operating_hours.Saturday}
                 <br />
-                Sunday : {dt.operating_hours.Sunday}
+                <span className="restaurant-page-timings-day">Sunday</span> : {dt.operating_hours.Sunday}
             </p>
             {reviews}
         </div>
