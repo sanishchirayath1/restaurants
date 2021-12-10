@@ -9,14 +9,26 @@ function Search() {
         lng:""
     })
 
-    function handleChange(e) {
-        setPlace(e.target.value)
-       }
-
     let placeCoords = {
         lat:10.5818,
         lng:76.0359
     }
+
+    function handleChange(e) {
+
+        setPlace(e.target.value)
+
+        navigator.geolocation.getCurrentPosition(pos => {
+            setCoords({
+                lat:pos.coords.latitude,
+                lng:pos.coords.longitude
+            })   
+            console.log(coords)
+        })
+
+       }
+
+ 
     console.log(placeCoords)
     console.log(coords)
 
@@ -28,13 +40,7 @@ function Search() {
     console.log("distance (in meters): " + haversineM + "m");
     console.log("distance (in kilometers): " + haversineKm+ "km");
 
-    navigator.geolocation.getCurrentPosition(pos => {
-        setCoords({
-            lat:pos.coords.latitude,
-            lng:pos.coords.longitude
-        })   
-        console.log(coords)
-    })
+    
     return (
         <>
         <div className="searchbar">
