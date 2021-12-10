@@ -67,16 +67,17 @@ function Search() {
         <>
         <div className="searchbar">
             <input type="text" id="search" className="search" onChange={handleChange} value={place} autoComplete="off"/>
-            <div id="search-overlay" className="search-overlay">{overlayItems}</div>
+            <div id="search-overlay" className="search-overlay">
+                {place && (
+                    <div style={{color:"#000", background:"#f1f1f1"}} className="search-location-details">
+                        <span> Your Latitude: {coords.lat} </span>
+                        <span> Your Longitude: {coords.lng} </span>
+                        <span> You are {haversineKm.toFixed(2)} KM away from Thrissur</span>
+                    </div>
+                )}
+                {overlayItems}
+            </div>
         </div>
-        
-        {place && (
-                <div style={{color:"#fff"}} className="search-location-details">
-                    <p>Your Latitude: {coords.lat}</p>
-                    <p>Your Longitude: {coords.lng}</p>
-                    <p>You are {haversineKm.toFixed(2)} KM away from Thrissur</p>
-                </div>
-            )}
         </>
     )
 }

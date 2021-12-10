@@ -97,8 +97,21 @@ span#title {
   text-indent: 1.5rem;
   background-color: rgb(218, 218, 218);
 }
+
 .search-active {
   border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.search-location-details {
+  position: aboslute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.search-location-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-overlay {
