@@ -35,7 +35,7 @@ function Search() {
             searchOverlay.classList.add("active")
             search.classList.add("search-active")
         }
-        if(searchResults.length === 0) {
+        if(searchResults.length === 0 && coords.lat === "") {
             search.classList.remove("search-active")
         }
         
