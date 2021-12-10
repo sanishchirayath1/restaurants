@@ -23,7 +23,7 @@ function Review(props) {
 
 
             <div className="restaurant-review-stats">
-                <span className="restaurant-review-rating">{review.rating} {stars()}</span>
+                <span className="restaurant-review-rating">{stars()} </span>
                 <span className="restaurant-review-date">
                 Reviewed on {review.date}</span>
             </div>
