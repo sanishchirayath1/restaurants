@@ -24,6 +24,10 @@ function Search() {
         
         setPlace(e.target.value)
 
+
+        let searchResults = data.restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(e.target.value.toLowerCase()))
+
+
         if(e.target.value === "") {
             searchOverlay.classList.remove("active")
             search.classList.remove("search-active")     
@@ -31,10 +35,12 @@ function Search() {
             searchOverlay.classList.add("active")
             search.classList.add("search-active")
         }
-
-        let searchResults = data.restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(e.target.value.toLowerCase()))
+        if(searchResults.length === 0) {
+            search.classList.remove("search-active")
+        }
         
-        console.log(searchResults)
+        
+
         let searchOverlayItems = searchResults.map(result => (<>
         <Link to={`/restaurants/${result.id}`}>
             <div className="search-overlay-items">
@@ -46,8 +52,6 @@ function Search() {
 
         setOverlayItems(searchOverlayItems)
 
-        
-
         navigator.geolocation.getCurrentPosition(pos => {
             setCoords({
                 lat:pos.coords.latitude,
@@ -55,7 +59,7 @@ function Search() {
             })   
         })
 
-
+        console.log(coords)
        }
 
     let haversine = require("haversine-distance");
@@ -68,7 +72,7 @@ function Search() {
         <div className="searchbar">
             <input type="text" id="search" className="search" onChange={handleChange} value={place} autoComplete="off"/>
             <div id="search-overlay" className="search-overlay">
-                {place && (
+                {coords.lat !== "" && (
                     <div className="search-location-details">
                         <span> Your Latitude: {coords.lat} </span>
                         <span> Your Longitude: {coords.lng} </span>
