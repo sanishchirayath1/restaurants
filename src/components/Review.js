@@ -5,11 +5,11 @@ function Review(props) {
     const { review } = props;
     
     function stars() {
+        const MAX_STARS = 5;
         let ratingStarsActive = ""
         let ratingStarsInctive = ""
-
-        let rating = review.rating
-        let ratingRemainder = 5 - review.rating
+        let rating = Math.floor(review.rating)
+        let ratingRemainder = Math.floor(MAX_STARS - review.rating)
 
         while(rating > 0) {
             ratingStarsActive += "⭐"
