@@ -29,12 +29,17 @@ nav ul {
   list-style: none;
 }
 nav ul a {
-  color: aliceblue;
+  color: rgb(206, 232, 255);
 }
-.title {
+nav ul a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+span#title {
   font-size: 36px;
   font-weight: bold;
   margin: 0;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -301,7 +306,7 @@ nav ul a {
   color: sandybrown;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 990px) {
   .restaurant-page-image {
     width: 100%;
   }

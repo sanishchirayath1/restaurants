@@ -3,12 +3,11 @@ import {Link} from "react-router-dom"
 
 function Navbar() {
     return (
-        <nav className="navbar"> <span 
-        // onClick={() => setShowRestaurant(false)} 
+        <nav className="navbar"> <Link to="/"> <span 
+        id="title" 
         className="title" 
-        ><Link to="/"> Foodie Spot </Link></span>
+        >Foodie Spot </span></Link>
         <ul><Link to="/"> <li 
-        // onClick={() => setShowRestaurant(false)}
         >Home</li></Link></ul>
         </nav>
     )
