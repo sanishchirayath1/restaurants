@@ -164,7 +164,7 @@ span#title {
   left: 5% ;  
   width: 90%;
   height: 1px;
-  background-color: transparent;
+  background-color: #000;
 }
 .search-overlay-items:hover,
 .search-overlay-items:focus {
